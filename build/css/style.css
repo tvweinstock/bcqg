@@ -1,0 +1,53 @@
+body {
+  font-family: didot;
+  background-color: #A6DEE1; }
+
+#app {
+  text-align: center; }
+
+.drop-boxes div {
+  display: inline-block;
+  border: 1px dashed;
+  border-color: transparent; }
+  .drop-boxes div.hovered {
+    border-color: #E51B37; }
+
+.letter-container {
+  position: relative;
+  font-size: 60px;
+  line-height: 60px;
+  width: 100px;
+  margin: 0 20px;
+  padding: 0 10px; }
+
+.hide {
+  display: none; }
+
+.drag-items div {
+  display: inline-block; }
+  .drag-items div.inactive {
+    display: none; }
+
+h1, #result-text {
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  text-align: center;
+  line-height: 50px; }
+
+ul {
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 15px;
+  list-style: none;
+  padding-top: 30px; }
+  ul li {
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+    ul li.played {
+      opacity: 0.5;
+      pointer-events: none; }
