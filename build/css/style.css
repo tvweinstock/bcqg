@@ -8,7 +8,13 @@ body {
 .drop-boxes div {
   display: inline-block;
   border: 1px dashed;
-  border-color: transparent; }
+  border-color: transparent;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 10px; }
   .drop-boxes div.hovered {
     border-color: #E51B37; }
 
@@ -23,11 +29,6 @@ body {
 .hide {
   display: none; }
 
-.drag-items div {
-  display: inline-block; }
-  .drag-items div.inactive {
-    display: none; }
-
 h1, #result-text {
   height: 50px;
   text-transform: uppercase;
@@ -35,19 +36,36 @@ h1, #result-text {
   text-align: center;
   line-height: 50px; }
 
-ul {
-  overflow: hidden;
-  width: 80%;
-  margin: 0 auto;
-  font-size: 15px;
-  list-style: none;
-  padding-top: 30px; }
-  ul li {
-    display: inline-block;
-    padding: 20px;
-    font-size: 20px;
+.drag-items {
+  width: 60%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px auto;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 630px; }
+  .drag-items div {
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 3px; }
-    ul li.played {
+    letter-spacing: 2px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    padding: 5px; }
+    .drag-items div.played {
       opacity: 0.5;
       pointer-events: none; }
+      .drag-items div.played.correct {
+        background-color: green; }
+      .drag-items div.played.incorrect {
+        background-color: #E51B37; }

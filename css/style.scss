@@ -15,6 +15,12 @@ body {
   display: inline-block;
   border: 1px dashed;
   border-color: transparent;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 10px;
   &.hovered {
     border-color: $red;
   }
@@ -31,16 +37,6 @@ body {
   display: none;
 }
 
-.drag-items {
-  div {
-    display: inline-block;  
-    &.inactive {
-      display: none;
-    }
-  }
-}
-
-
 h1, #result-text {
   height: 50px;
   text-transform: uppercase;
@@ -50,22 +46,33 @@ h1, #result-text {
 }
 
 
-ul {
-  overflow: hidden;
-  width: 80%;
-  margin: 0 auto;
-  font-size: 15px;
-  list-style: none;
-  padding-top: 30px;
-  li {
-    display: inline-block;
-    padding: 20px;
-    font-size: 20px;
+.drag-items {
+  width: 60%;
+  display: flex;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 630px;
+  div {
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    padding: 5px;
     &.played {
       opacity: 0.5;
       pointer-events: none;
+      &.correct {
+        background-color: green;
+      }
+      &.incorrect {
+        background-color: $red;
+      }
     }
   }
 }

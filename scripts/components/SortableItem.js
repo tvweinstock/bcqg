@@ -42,14 +42,14 @@ class SortableItem extends React.Component {
     const correctClass = this.state.correct ? "correct" : "incorrect";
     const itemClasses = classNames(playedClass, correctClass);
     return (
-      <li className={itemClasses}
+      <div className={itemClasses}
           draggable="true"
           onDragStart={this.dragStart.bind(this)}
           onDragEnd={this.dragEnd.bind(this)}
           gender={quizWord.gender}
           >
           {quizWord.word}
-      </li>   
+      </div>   
     )
   }
 }

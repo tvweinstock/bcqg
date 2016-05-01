@@ -24,9 +24,7 @@ class App extends React.Component {
           <AnswerBox gender="masculin" display="M" />
         </section>
         <section className="drag-items">
-          <ul>
-            {Object.keys(this.state.quizWords).map(this.renderQuizWords)}
-          </ul>
+          {Object.keys(this.state.quizWords).map(this.renderQuizWords)}
         </section>
       </div>
     )
