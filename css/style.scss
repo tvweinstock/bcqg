@@ -1,48 +1,57 @@
-$lightBlue: #A6DEE1;
-$darkBlue: #0B2634;
-$red: #E51B37;
+$lightBlue: #477998;
+$black: #0B2634;
+$red: #f64740;
+$green: #c4d6b0;
+
+* {
+   box-sizing: border-box;
+}
+
 
 body {
   font-family: didot;
   background-color: $lightBlue;
+  color: $black;
 }
 
 #app {
   text-align: center;
 }
 
-.drop-boxes div {
+.drop-boxes .not-hovered, .drop-boxes .hovered {
   display: inline-block;
-  border: 1px dashed;
-  border-color: transparent;
-  height: 100px;
-  width: 100px;
-  line-height: 100px;
   margin: 0 auto;
-  border-radius: 50%;
   padding: 10px;
-  &.hovered {
+  &.hovered .letter-container {
     border-color: $red;
   }
 }
 .letter-container {
+  border: 1px dashed;
+  border-color: transparent;
   position: relative;
+  border-radius: 50%;
   font-size: 60px;
-  line-height: 60px;
-  width: 100px;
+  line-height: 110px;
+  width: 110px;
+  height: 110px;
   margin: 0 20px;
   padding: 0 10px;
-}
-.hide {
-  display: none;
+  background: #fff;
 }
 
-h1, #result-text {
-  height: 50px;
+#result {
   text-transform: uppercase;
   font-weight: lighter;
   text-align: center;
-  line-height: 50px;
+  margin: 50px auto 20px;
+  font-size: 30px;
+  width: 200px;
+  display: block;
+  background: #fff;
+  padding: 10px;
+  border: 3px dotted $green;
+	box-shadow: inset 0 -1px 0 0 $green, inset 0 1px 0 0 $green, 0 1px 0 0 $green, 0 -1px 0 0 #e5e5e5;
 }
 
 
@@ -57,18 +66,18 @@ h1, #result-text {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    background-color: #fff;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     margin-bottom: 20px;
+    line-height: 100px;
     padding: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s ease-out;
     &.played {
-      opacity: 0.5;
       pointer-events: none;
       &.correct {
-        background-color: green;
+        background-color: $green;
       }
       &.incorrect {
         background-color: $red;

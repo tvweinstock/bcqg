@@ -34,11 +34,11 @@ class AnswerBox extends React.Component {
     let dropGender = this.props.gender;
     result.setAttribute('word', dragWord);
     if (dropGender === dragGender) {
-      result.innerHTML = 'correct!';
+      result.value = 'bien !';
       result.setAttribute('answer', 'correct');
     }
     else {
-      result.innerHTML = 'non!';   
+      result.value = 'non !';   
       result.setAttribute('answer', 'incorrect');
     }
     this.setState({

@@ -17,6 +17,7 @@ class SortableItem extends React.Component {
   dragEnd(e) {
     let result = document.getElementById('result');
     let resultWord = result.getAttribute('word');
+    let wordsLeftToPlay = document.querySelectorAll('.not-played').length;
     if (resultWord === this.props.details.word) {
       this.setState({
         played: !this.state.played,
@@ -35,6 +36,9 @@ class SortableItem extends React.Component {
       });
       }
     }
+    if (wordsLeftToPlay <= 1) {
+      console.log('it\'s ovahhhh');
+    }
   }
   render() {
     const quizWord = this.props.details;
@@ -47,6 +51,7 @@ class SortableItem extends React.Component {
           onDragStart={this.dragStart.bind(this)}
           onDragEnd={this.dragEnd.bind(this)}
           gender={quizWord.gender}
+          title={quizWord.eng_trad}
           >
           {quizWord.word}
       </div>   

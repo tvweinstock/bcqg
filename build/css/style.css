@@ -1,40 +1,46 @@
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: didot;
-  background-color: #A6DEE1; }
+  background-color: #477998;
+  color: #0B2634; }
 
 #app {
   text-align: center; }
 
-.drop-boxes div {
+.drop-boxes .not-hovered, .drop-boxes .hovered {
   display: inline-block;
-  border: 1px dashed;
-  border-color: transparent;
-  height: 100px;
-  width: 100px;
-  line-height: 100px;
   margin: 0 auto;
-  border-radius: 50%;
   padding: 10px; }
-  .drop-boxes div.hovered {
-    border-color: #E51B37; }
+  .drop-boxes .not-hovered.hovered .letter-container, .drop-boxes .hovered.hovered .letter-container {
+    border-color: #f64740; }
 
 .letter-container {
+  border: 1px dashed;
+  border-color: transparent;
   position: relative;
+  border-radius: 50%;
   font-size: 60px;
-  line-height: 60px;
-  width: 100px;
+  line-height: 110px;
+  width: 110px;
+  height: 110px;
   margin: 0 20px;
-  padding: 0 10px; }
+  padding: 0 10px;
+  background: #fff; }
 
-.hide {
-  display: none; }
-
-h1, #result-text {
-  height: 50px;
+#result {
   text-transform: uppercase;
   font-weight: lighter;
   text-align: center;
-  line-height: 50px; }
+  margin: 50px auto 20px;
+  font-size: 30px;
+  width: 200px;
+  display: block;
+  background: #fff;
+  padding: 10px;
+  border: 3px dotted #c4d6b0;
+  box-shadow: inset 0 -1px 0 0 #c4d6b0, inset 0 1px 0 0 #c4d6b0, 0 1px 0 0 #c4d6b0, 0 -1px 0 0 #e5e5e5; }
 
 .drag-items {
   width: 60%;
@@ -55,17 +61,18 @@ h1, #result-text {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    width: 100px;
-    height: 100px;
-    line-height: 100px;
-    background-color: #fff;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     margin-bottom: 20px;
-    padding: 5px; }
+    line-height: 100px;
+    padding: 5px;
+    background-color: #fff;
+    -webkit-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out; }
     .drag-items div.played {
-      opacity: 0.5;
       pointer-events: none; }
       .drag-items div.played.correct {
-        background-color: green; }
+        background-color: #c4d6b0; }
       .drag-items div.played.incorrect {
-        background-color: #E51B37; }
+        background-color: #f64740; }

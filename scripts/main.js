@@ -19,7 +19,7 @@ class App extends React.Component {
     return (
       <div>
         <section className="drop-boxes">
-          <h1>Réponse: <span id="result"></span></h1>
+          <input id="result" placeholder="Réponse" />
           <AnswerBox gender="feminin" display="F" />
           <AnswerBox gender="masculin" display="M" />
         </section>
