@@ -37,9 +37,16 @@ class SortableItem extends React.Component {
       }
     }
     if (wordsLeftToPlay <= 1) {
-      console.log('it\'s ovahhhh');
+      let scoreModal = document.getElementById("modal-score");
+      let overlay = document.querySelector('.overlay')
+      let totalCount = document.querySelector(".drag-items").children.length
+      let correctCount = document.querySelectorAll(".correct").length
+      scoreModal.style.display = "block";
+      overlay.style.display = "block";
+      console.log(scoreModal)
+      scoreModal.children[2].innerHTML = 'Your score is ' + correctCount + '/' + totalCount;
     }
-  }
+  }  
   render() {
     const quizWord = this.props.details;
     const playedClass = this.state.played ? "played" : "not-played";

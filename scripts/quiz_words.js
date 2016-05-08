@@ -15,7 +15,7 @@ module.exports = {
   // word14: {word:'mur', gender:'masculin', eng_trad: 'wall'},
   word15: {word:'café', gender:'masculin', eng_trad: 'coffee'},
   word16: {word:'timbre', gender:'masculin', eng_trad: 'stamp'},
-  // word17: {word:'Asie', gender:'feminin', eng_trad: 'asia'},
+  word17: {word:'Asie', gender:'feminin', eng_trad: 'asia'},
   word18: {word:'verre', gender:'masculin', eng_trad: 'glass'},
   word19: {word:'nuit', gender:'feminin', eng_trad: 'night'},
   word20: {word:'nuage', gender:'masculin', eng_trad: 'cloud'}

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AnswerBox from './components/AnswerBox'
 import SortableItem from './components/SortableItem'
+import Modal from './components/Modal'
 
 class App extends React.Component {
   constructor(props) {
@@ -14,12 +15,14 @@ class App extends React.Component {
   renderQuizWords(key) {
     return <SortableItem key={key} details={this.state.quizWords[key]} gender={this.state.quizWords[key].gender} />
   }
-  
   render() {
     return (
-      <div>
+      <div className="main">
+        <div className="overlay"/>
+        <Modal text="Intro" id="modal-intro" description="Drag the words below over the masculin and feminin answer key!" />
+        <Modal text="Score" id="modal-score" />
         <section className="drop-boxes">
-          <input id="result" placeholder="Réponse" />
+          <input id="result" placeholder="Réponse" disabled />
           <AnswerBox gender="feminin" display="F" />
           <AnswerBox gender="masculin" display="M" />
         </section>
