@@ -44,7 +44,7 @@ class SortableItem extends React.Component {
       scoreModal.style.display = "block";
       overlay.style.display = "block";
       console.log(scoreModal)
-      scoreModal.children[2].innerHTML = 'Your score is ' + correctCount + '/' + totalCount;
+      scoreModal.children[3].innerHTML = correctCount + '/' + totalCount;
     }
   }  
   render() {

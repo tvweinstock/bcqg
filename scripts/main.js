@@ -19,8 +19,8 @@ class App extends React.Component {
     return (
       <div className="main">
         <div className="overlay"/>
-        <Modal text="Intro" id="modal-intro" description="Drag the words below over the masculin and feminin answer key!" />
-        <Modal text="Score" id="modal-score" />
+        <Modal text="Intro" id="modal-intro" description="Test your knowledge of french genders, drag the words over the 'F' and 'M' answer keys. Left is for feminin and right for masculin!" />
+        <Modal text="Fin !" description="Voilà ton score:" id="modal-score" img="https://upload.wikimedia.org/wikipedia/commons/a/a4/Animated-Flag-France.gif" />
         <section className="drop-boxes">
           <input id="result" placeholder="Réponse" disabled />
           <AnswerBox gender="feminin" display="F" />

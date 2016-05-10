@@ -4,7 +4,11 @@
 body {
   font-family: didot;
   background-color: #477998;
-  color: #0B2634; }
+  color: #0B2634;
+  background-image: -webkit-radial-gradient(rgba(255, 255, 255, 0.3) 30%, transparent 30%), -webkit-radial-gradient(rgba(255, 255, 255, 0.3) 30%, transparent 30%);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.3) 30%, transparent 30%), radial-gradient(rgba(255, 255, 255, 0.3) 30%, transparent 30%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px; }
 
 .main {
   overflow: hidden;
@@ -85,7 +89,6 @@ body {
   z-index: 999;
   position: fixed;
   width: 50%;
-  height: 50%;
   top: 50%;
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
