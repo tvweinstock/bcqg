@@ -46,12 +46,12 @@ class SortableItem extends React.Component {
       console.log(scoreModal)
       scoreModal.children[3].innerHTML = correctCount + '/' + totalCount;
     }
-  }  
+  }
   render() {
     const quizWord = this.props.details;
     const playedClass = this.state.played ? "played" : "not-played";
     const correctClass = this.state.correct ? "correct" : "incorrect";
-    const itemClasses = classNames(playedClass, correctClass);
+    const itemClasses = "words " + classNames(playedClass, correctClass);
     return (
       <div className={itemClasses}
           draggable="true"
@@ -60,8 +60,10 @@ class SortableItem extends React.Component {
           gender={quizWord.gender}
           title={quizWord.eng_trad}
           >
-          {quizWord.word}
-      </div>   
+          <div>{quizWord.word}</div>
+
+          <div>{(this.state.played) ?  quizWord.gender[0] : ''}</div>
+      </div>
     )
   }
 }
