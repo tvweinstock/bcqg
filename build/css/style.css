@@ -73,6 +73,7 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -104,6 +105,16 @@ body {
         background-color: #c4d6b0; }
       .drag-items .words.played.incorrect {
         background-color: #f64740; }
+    .drag-items .words .display-word {
+      z-index: 3; }
+    .drag-items .words .answer {
+      position: absolute;
+      color: white;
+      opacity: 0.5;
+      z-index: 1;
+      font-size: 60px;
+      top: 18%;
+      left: 27%; }
 
 .modal {
   z-index: 999;

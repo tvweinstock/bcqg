@@ -60,9 +60,9 @@ class SortableItem extends React.Component {
           gender={quizWord.gender}
           title={quizWord.eng_trad}
           >
-          <div>{quizWord.word}</div>
+          <div className="display-word">{quizWord.word}</div>
 
-          <div>{(this.state.played) ?  quizWord.gender[0] : ''}</div>
+          <div className="answer">{(this.state.played) ?  quizWord.gender[0] : ''}</div>
       </div>
     )
   }
