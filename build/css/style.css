@@ -63,8 +63,30 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 630px; }
-  .drag-items div {
+  max-width: 630px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .drag-items .words {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -73,17 +95,26 @@ body {
     border-radius: 50%;
     margin-bottom: 20px;
     box-shadow: inset 0 0 8px rgba(11, 38, 52, 0.5), 0 0 16px rgba(11, 38, 52, 0.5);
-    line-height: 100px;
     padding: 5px;
     background-color: #fff;
     -webkit-transition: background-color 0.3s ease-out;
     transition: background-color 0.3s ease-out; }
-    .drag-items div.played {
+    .drag-items .words.played {
       pointer-events: none; }
-      .drag-items div.played.correct {
+      .drag-items .words.played.correct {
         background-color: #c4d6b0; }
-      .drag-items div.played.incorrect {
+      .drag-items .words.played.incorrect {
         background-color: #f64740; }
+    .drag-items .words .display-word {
+      z-index: 3; }
+    .drag-items .words .answer {
+      position: absolute;
+      color: white;
+      opacity: 0.5;
+      z-index: 1;
+      font-size: 60px;
+      top: 18%;
+      left: 27%; }
 
 .modal {
   z-index: 999;
